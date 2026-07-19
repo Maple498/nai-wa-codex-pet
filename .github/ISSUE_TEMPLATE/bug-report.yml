@@ -1,0 +1,58 @@
+name: 问题反馈
+description: 报告奶蛙的安装、显示或动作问题
+title: "[问题] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请不要粘贴令牌、账号、个人路径或其他敏感信息。
+  - type: input
+    id: codex_version
+    attributes:
+      label: Codex 版本
+      description: 请填写“关于 Codex”中显示的版本号。
+    validations:
+      required: true
+  - type: dropdown
+    id: operating_system
+    attributes:
+      label: 操作系统
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - 其他
+    validations:
+      required: true
+  - type: dropdown
+    id: installation_method
+    attributes:
+      label: 安装方式
+      options:
+        - install.sh
+        - install.ps1
+        - 手动复制
+        - 让 Codex 自动安装
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题描述
+      description: 请说明实际结果与预期结果。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤
+      description: 请按顺序列出触发问题的操作。
+    validations:
+      required: true
+  - type: textarea
+    id: attachments
+    attributes:
+      label: 截图或录屏
+      description: 可选。请先移除敏感信息。
